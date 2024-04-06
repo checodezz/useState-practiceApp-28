@@ -3,6 +3,7 @@ import Article from "./Article";
 import About from "./About";
 import UserInfo from "./UserInfo";
 import UserProfile from "./UserProfile"
+import ProductDetails from "./ProductDetails"
 /* 
 1. Build a React component called Article that accepts two props: title and content. Inside the component, render a <h1> tag with the title prop and a button below that which says “Know More”. On the click of the button, show the content in a <p> tag just below the button.
 */
@@ -25,6 +26,12 @@ export default function App() {
     bio: "Frontend Developer",
     location: "New York",
   };
+
+  const smartphoneObj = {
+    productName: "smartphone",
+    description: "High-performance smartphone with advanced features.",
+    price: 599.99
+  }
   return (
     <main>
       <Article title={title} content={content} />
@@ -34,6 +41,8 @@ export default function App() {
       <UserInfo username={username} email={email} age={age} />
       <hr />
       <UserProfile userProfileObj={userProfileObj}/>
+      <hr />
+<ProductDetails smartphoneObj={smartphoneObj}/>
     </main>
   );
 }
